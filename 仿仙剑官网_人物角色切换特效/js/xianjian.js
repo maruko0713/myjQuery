@@ -1,14 +1,18 @@
 $(function(){
-	var imgList = [ "big1.jpg", "big2.jpg", "big3.jpg", "big4.jpg", "big5.jpg", "big6.jpg" ];
-	$(".role-body li").click(function(){
-		var index = $(this).index();
-		$(".role-body li").each(function( i ){
-			if ( index == i ) {
-				$(this).children("a").addClass( "r" + (i+1) + '_' + (i+1) );
-				$(".role-img img").fadeOut().attr( "src", "./img/" + imgList[i] ).fadeIn();
-			}else {
-				$(".role-body li").eq(i).children("a").removeClass( "r" + (i+1) + '_' + (i+1) );
-			}
-		});
-	});
+    var imgs = ["img/big1.jpg","img/big2.jpg","img/big3.jpg","img/big4.jpg","img/big5.jpg","img/big6.jpg"];
+    $(".role-body li").click(function() {
+    	var index = $(this).index();
+    	$(".role-body li").each(function(i) {
+    		if(i==index) {
+    			$(this).children("a").addClass("r"+(index+1)+"_"+(index+1));
+                $(".role-body img").fadeOut().queue(function(next){
+                	$(this).attr("src",imgs[i]);
+                	next();
+                }).fadeIn();
+
+    		} else {
+    			$(this).children("a").removeClass("r"+(index+1)+"_"+(index+1));
+    		}
+    	});
+    });
 });

@@ -40,28 +40,42 @@ $(function(){
 			}
 		}
 	});
-
-	$("#selectA").live( "click", function(){
+ //    document.getElementById("#selectA").onclick = function(event){
+	// 	event.preventDefault();
+	// 	$(this).remove();
+	// 	$("#select1 .select-all").addClass("selected").siblings("dd").removeClass( "selected" );
+	// };
+	// document.getElementById("selectA").onclick = function(event){
+	// 	$(this).remove();
+	// 	$("#select1 .select-all").addClass("selected").siblings("dd").removeClass( "selected" );
+	// }
+	$("#selectA").on("click",function(event){
+		event.preventDefault();
 		$(this).remove();
 		$("#select1 .select-all").addClass("selected").siblings("dd").removeClass( "selected" );
-	} );
+		return false;
+	});
 
-	$("#selectB").live( "click", function(){
+	$("#selectB").on( "click", function(){
 		$(this).remove();
 		$("#select2 .select-all").addClass("selected").siblings("dd").removeClass( "selected" );
+		return false;
 	} );
 
-	$("#selectC").live( "click", function(){
+
+	$("#selectC").on( "click", function(){
 		$(this).remove();
 		$("#select3 .select-all").addClass("selected").siblings("dd").removeClass( "selected" );
+		return false;
 	} );
 
-	$(".select dd").live( "click", function(){
+	$(".select dd").on( "click", function(){
 		if ( $(".select-result dd").length > 1 ) {
 			$( ".select-no" ).hide();
 		}else {
 			$( ".select-no" ).show();
 		}
+		return false;
 	} );
 
 

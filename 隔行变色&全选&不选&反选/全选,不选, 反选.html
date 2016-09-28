@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>全选, 不选, 反选</title>
-	<script src="../js/jquery.min.js"></script>
+	<script src="../jquery.min.js"></script>
 	<script>
 	$(function(){
 		$("input:eq(0)").click(function(){
@@ -14,13 +14,9 @@
 		});
 		$("input:eq(2)").click(function(){
 			$("#box input").each(function( i ){
-				if ( $(this).attr( "checked" ) ) {
-					$(this).attr( "checked", false );
-				}else{
-					$(this).attr( "checked", true );
-				}
-			});
-		});
+				var checked = $(this).attr( "checked" );
+				$(this).attr( "checked", !checked );
+		})});
 	});
 	</script>
 </head>
