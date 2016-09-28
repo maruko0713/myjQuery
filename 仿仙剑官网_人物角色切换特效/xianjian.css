@@ -1,0 +1,99 @@
+* {
+	margin: 0px;
+	padding: 0px;
+}
+
+a {
+	text-decoration: none;
+}
+
+ul,li {
+	list-style-type: none;
+}
+
+.role {
+	width: 100%;
+	height: 330px;
+	background: url("./img/bg.jpg") center top no-repeat;
+}
+
+.role-body {
+	width: 1000px;
+	margin: 0px auto;
+	height: 330px;
+	position: relative;
+}
+
+.role-body ul {
+	position: absolute;
+	top: 15px;
+	left: 10px;
+	width: 980px;
+	height: 181px;
+}
+
+.role-body ul li {
+	float: left;
+}
+
+.role-body ul li a{
+	display: block;
+	width: 75px;
+	height: 181px;
+	background: url(./img/role.png) no-repeat;
+}
+
+.role-body ul li.role-right {
+	 margin: 0 0 0 500px;
+}
+
+.role-body ul li a.r1 {
+	background-position: -2px -3px;
+}
+
+.role-body ul li a.r1_1 {
+	background-position: -2px -199px;
+}
+
+.role-body ul li a.r2 {
+	background-position: -81px -3px;
+}
+
+.role-body ul li a.r2_2 {
+	background-position: -81px -199px;
+}
+
+.role-body ul li a.r3 {
+	background-position: -160px -3px;
+}
+
+.role-body ul li a.r3_3 {
+	background-position: -160px -199px;
+}
+
+.role-body ul li a.r4 {
+	background-position: -239px -3px;
+}
+
+.role-body ul li a.r4_4 {
+	background-position: -239px -199px;
+}
+
+.role-body ul li a.r5 {
+	background-position: -318px -3px;
+}
+
+.role-body ul li a.r5_5 {
+	background-position: -318px -199px;
+}
+
+.role-body ul li a.r6 {
+	background-position: -397px -3px;
+}
+
+.role-body ul li a.r6_6 {
+	background-position: -397px -199px;
+}
+
+
+
