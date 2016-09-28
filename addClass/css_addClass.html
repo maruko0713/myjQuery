@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>css和addClass</title>
+	<script src="../jquery.min.js"></script>
+	<script>
+	$(function(){
+		$( "#btn" ).click( function(){
+			// $( "#box" ).css( "border", "5px solid red" );
+			// $( "#box" ).css( "background", "green" );
+
+			$( "#box" ).css( "border", "5px solid red" ).css( "background", "yellow" );
+
+			// $( "#box" ).css( { "border" : "5px solid red", "background" : "orange" } );
+
+			// $( "#box" ).addClass( "bd" ).addClass( "bg" );
+		} );	
+		$("#btn2").click(function(){
+			// $("#box").removeClass();
+			// $("#box").removeClass( "bd" ).removeClass( "bg" );
+			// $( "#box" ).css( "border", "" ).css( "background", "" );
+			$( "#box" ).css( { "border" : "", "background" : "" } );
+
+		});
+	});
+	</script>
+	<style>
+	div {
+		width: 200px;
+		height: 200px;
+		border: 1px solid #000;
+	}
+	.bd {
+		border: 5px solid red;
+	}
+	.bg {
+		background: green;
+	}
+	</style>	
+</head>
+<body>
+	<input type="button" value="改变样式" id="btn">		
+	<input type="button" value="删除样式" id="btn2">		
+	<div id="box"></div>
+</body>
+</html>

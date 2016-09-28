@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>隔行变色</title>
+	<script src="../js/jquery.min.js"></script>
+	<script>
+	$(function(){
+		$("div:even").addClass( "even" );
+		$("div:odd").addClass( "odd" );
+		// $("div").mouseover(function(){
+		// 	$(this).addClass( "active" );
+		// }).mouseout(function(){
+		// 	$(this).removeClass( "active" );
+		// });
+
+		//hover( function(){}, function(){} );
+		$("div").hover(function(){
+			$(this).addClass( "active" );
+		}, function(){
+			$(this).removeClass( "active" );
+		});
+	});
+	</script>
+	<style>
+	div {
+		padding: 20px;
+		margin: 10px;
+		border: 1px solid #000;
+	}
+	.even {
+		background: #333;
+	}
+	.odd {
+		background: #999;
+	}
+	.active {
+		background: yellow;
+	}
+	</style>
+</head>
+<body>
+	<div></div>	
+	<div></div>	
+	<div></div>	
+	<div></div>	
+	<div></div>	
+	<div></div>	
+	<div></div>	
+	<div></div>	
+	<div></div>	
+	<div></div>	
+	<div></div>	
+</body>
+</html>

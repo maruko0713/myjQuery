@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>json数据格式</title>
+	<script>
+	// var json = { "a" : 10, "b" : 20, "c" : 30 };
+	var json = { 
+		"a" : 10,
+		"b" : 20,
+		"c" : 30,
+		show : function () {
+			alert( this.a + ":" + this.b + ":" + this.c );
+		}
+	};
+
+	// json.a = 200;
+	// json["a"] = 300;
+	// alert( json.b );
+	// alert( json["a"] );
+
+	// alert( json.length );
+	// for ( var key in json ) {
+	// 	alert( key + ":" + json[key] );
+	// }
+
+	json.show();
+
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>数组中的匿名函数&闭包</title>
+	<script>
+
+	// function show () {
+	// 	var arr = [];
+	// 	for ( var i = 0; i < 5; i++ ) {
+	// 		arr[i] = function () {
+	// 			return i;
+	// 		}
+	// 	}	
+	// 	return arr;
+	// }
+
+	function show () {
+		var arr = [];
+		for ( var i = 0; i < 5; i++ ) {
+			arr[i] = (function ( j ) {
+				return function () {
+					return j;
+				};
+			})( i );
+		}	
+		return arr;
+	}
+	var aFunc = show();
+
+	for ( var j = 0; j < aFunc.length; j++ ) {
+		alert( aFunc[j]() );
+	}
+
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

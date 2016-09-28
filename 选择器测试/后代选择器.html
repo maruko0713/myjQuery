@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>后代选择器</title>
+	<script src="../js/jquery.min.js"></script>	
+	<script>
+	$(function(){
+		// $( "body div" ).css( "border", "5px solid red" );
+		// $( "body div:eq(0)" ).css( "border", "5px solid red" );
+		// $( "body div:eq(5)" ).css( "border", "5px solid red" );
+		// $( "body div:first" ).css( "border", "5px solid red" );
+		// $( "body div:last" ).css( "border", "5px solid red" );
+		//lt -- less than   gt --> greater than
+		// $( "body div:lt(2)" ).css( "border", "5px solid red" );
+		// $( "body div:gt(2)" ).css( "border", "5px solid red" );
+
+		// $( "body > div" ).css( "border", "5px solid red" );
+		// $( "body > div:eq(0)" ).css( "border", "5px solid red" );
+		// $( "body > div:eq(4)" ).css( "border", "5px solid red" );
+		// $( "body > div:first" ).css( "border", "5px solid red" );
+		// $( "body > div:last" ).css( "border", "5px solid red" );
+		// $( "body > div:lt(3)" ).css( "border", "5px solid red" );
+		$( "body > div:gt(3)" ).css( "border", "5px solid red" );
+
+	});	
+	</script>
+	<style>
+	div {
+		padding: 10px;
+		margin: 5px;
+		border: 1px solid #000;
+	}
+	</style>
+</head>
+<body>
+	<div>1</div>
+	<div>2</div>
+	<div>3</div>
+	<div>4
+		<div>5
+			<div>6</div>
+		</div>
+	</div>
+	<div>7
+		<div>8
+			<div>9
+				<div>10</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

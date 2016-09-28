@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>基本&层次选择器</title>
+	<script src="../js/jquery.min.js"></script>
+	<script>
+	$(function(){
+		// $( "#box1" ).css( "border", "5px solid red" );
+		// $( "#box2" ).css( "border", "5px solid red" );
+
+		// $( ".son" ).css( "border", "5px solid red" );
+		// $( "div" ).css( "border", "5px solid red" );
+
+		// $( "body > div, #box1 div" ).css( "border", "5px solid red" );
+
+		// $( "body div" ).css( "border", "5px solid red" );
+		// $( "body > div" ).css( "border", "5px solid red" );
+
+		// $( "#box1 + div" ).css( "border", "5px solid red" );
+		// $( "#box1" ).next().css( "border", "5px solid green" );
+
+		// $( "#box1 div:eq(1) ~ div" ).css( "border", "5px solid red" );
+		// $( "#box1 div:eq(1)" ).nextAll().css( "border", "5px solid red" );
+		// $( "#box1 div:eq(1)" ).nextAll( "div" ).css( "border", "5px solid red" );
+
+		// $( "#box1 div:eq(1)" ).siblings().css( "border", "5px solid red" );
+		$( "#box1 div:eq(1)" ).siblings( "div" ).css( "border", "5px solid red" );
+
+	});
+	</script>
+	<style>
+	div {
+		padding: 10px;
+	});
+	</script>
+	<style>
+	div {
+		padding: 10px;
+		margin: 10px;
+		border: 1px solid #000;
+	}
+	p {
+		padding: 10px;
+		border: 1px solid #000;
+	}
+	</style>
+</head>
+<body>
+	<div id="box1">
+		<div class="son">
+			<p>段落1</p>
+		</div>
+		<div class="son">
+			<p>段落2</p>
+		</div>
+		<div class="son">
+			<p>段落3</p>
+		</div>
+		<div class="son">
+			<p>段落4</p>
+		</div>
+		<p>段落</p>
+	</div>	
+	<div id="box2">
+		<div class="son">
+			<p>段落2-1</p>
+		</div>
+		<div class="son">
+			<p>段落2-2</p>
+		</div>
+		<div class="son">
+			<p>段落2-3</p>
+		</div>
+		<div class="son">
+			<p>段落2-4</p>
+		</div>
+	</div>	
+</body>
+</html>

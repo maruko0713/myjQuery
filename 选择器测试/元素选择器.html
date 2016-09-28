@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>元素选择器</title>
+	<script src="../js/jquery.min.js"></script>	
+	<script>
+	$(function(){
+		$("#btn1").click(function(){
+			$("div").css( "background", "red" );
+		});
+		$("#btn2").click(function(){
+			$("div").css( "background", "green" );
+		});
+		$("#btn3").click(function(){
+			$("div").css( "background", "blue" );
+		});
+	});
+	</script>
+	<style>
+	div {
+		width: 200px;
+		height: 200px;
+		border: 1px solid #000;
+		float: left;
+		margin: 20px;
+	}
+	</style>
+</head>
+<body>
+	<input type="button" value="变红" id="btn1">	
+	<input type="button" value="变绿" id="btn2">	
+	<input type="button" value="变蓝" id="btn3">	
+	<br>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+</body>
+</html>

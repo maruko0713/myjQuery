@@ -1,0 +1,87 @@
+* {
+	margin: 0px;
+	padding: 0px;
+	font-family: "微软雅黑";
+}
+a {
+    color: #666;
+    text-decoration: none;
+}
+
+a:hover {
+	color:#b51d1a;
+}
+
+ul,li {
+	list-style-type: none;
+}
+
+.guess {
+	width: 1210px;
+	margin: 100px auto;
+}
+
+.clear {
+	clear: both;
+}
+
+.guess-header h3{
+	color:#333;
+	font-weight: 400;
+	padding-right: 228px;
+    float: left;
+    line-height: 30px;
+    font-size: 20px;
+	background: url("./img/homebg.png") 87px -91px no-repeat;
+}
+.guess-header .guess-btn {
+	float: right;
+	height: 18px;
+    padding-right: 25px;
+    margin-top: 8px;
+    background: url("./img/homebg.png") -300px -5px no-repeat;
+}
+
+.guess-body ul {
+	width: 1208px;
+	height: 230px;
+	border:1px solid #ededed;
+	display: none;
+}
+
+.guess-body ul.active {
+	display: block;
+}
+
+.guess-body ul li {
+	float: left;
+	width: 181px;
+	padding: 10px;
+}
+
+.guess-body ul li .guess-p-title{
+	border-right:1px solid #ededed;
+	height: 61px;
+}
+
+.guess-body ul li:last-child .guess-p-title{
+	border: none;
+}
+
+.guess-body ul li .guess-p-title a:before,
+.guess-body ul li .guess-p-title a:after
+ {
+	display: table;
+  	content: "";
+  	clear: both;
+}
+
+.guess-body .guess-p-price {
+	color:#b51d1a;
+	margin-top: 10px;
+	display: block;
+	float: left;
+	text-align: center;
+}
+
+
