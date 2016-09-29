@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>动画1</title>
+	<script src="../jquery.min.js"></script>
+	<script>
+	$(function(){
+		$("#box1").click(function(){
+			$(this).animate( { "width" : "400px" }, 1000 )
+				.animate( { "height" : "400px" }, 1000 );
+		});
+	});
+	</script>
+	<style>
+	div {
+		width: 200px;
+		height: 200px;
+		background: red;
+		position: absolute;
+		left:0px;
+	}
+	</style>
+</head>
+<body>
+	<div id="box1"></div>	
+</body>
+</html>

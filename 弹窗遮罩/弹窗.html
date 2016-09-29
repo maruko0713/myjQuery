@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />				
+		<link rel="stylesheet" href="./css/index.css" />
+		<script src="../jquery.min.js"></script>
+		<script src="./js/pop.js"></script>
+	</head>
+	<body style="height:2000px;">
+		<input type="button" id="btn" value="点击弹窗" /><br/>
+		<div id="login">
+			<div class="header">
+				<h3>用户登录窗口</h3>
+				<a href="javascript:;" class="close">X</a>
+			</div>
+			<div class="body">
+				<h3>购物之前必须先登录</h3>
+				<ul>
+					<li><span>用户名:</span><input type="text" name="user" /></li>
+					<li><span>密码:</span><input type="text" name="userPwd" /></li>
+					<li class="act"><input type="submit" value="登录" class="btn"/></li>
+				</ul>
+			</div>
+		</div>
+		<div class="mask"></div>
+	</body>
+</html>

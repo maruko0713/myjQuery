@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>动画效果</title>
+	<script src="./js/jquery.min.js"></script>
+	<script>
+	$(function(){
+		$("#btn").click(function(){
+			// $("div").eq(0).animate( {"left" : "1000px"}, 2000, "linear" );
+			// $("div").eq(1).animate( {"left" : "1000px"}, 2000, "swing" );
+		});
+	});
+	</script>
+	<style>
+	div {
+		width: 100px;
+		height: 100px;
+		position: absolute;
+		background: red;
+		left:0px;
+	}
+	</style>
+</head>
+<body>
+	<input type="button" value="动起来" id="btn">
+	<div style="top:50px;"></div>	
+	<div style="top:200px;"></div>	
+</body>
+</html>

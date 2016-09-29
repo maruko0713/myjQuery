@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="../jquery.min.js"></script>
+	<style>
+	* {
+		margin:0;
+		padding:0;
+		list-style-type:none;
+	}
+	img {
+		border:none;
+	}
+	a {
+		text-decoration: none;
+	}
+	body{
+		font:12px/22px "微软雅黑";
+	}
+	.pic{
+		width:1100px;
+		height:430px;
+		margin:70px auto 0;
+	} 
+	.pic ul li{
+		width:100px;
+		height:429px;
+		float:left;
+	}
+	.pic .l1{
+		background-image:url("img/1.jpg");
+	}
+	.pic .l2{
+		background-image:url("img/2.jpg");
+	}
+	.pic .l3{
+		background-image:url("img/3.jpg");
+	}
+	.pic .l4{
+		background-image:url("img/4.jpg");
+		width:789px;
+	}
+	.txt{
+		width:100px; 
+		height:429px;
+		background:#000;
+		filter:alpha(opacity:50);
+		opacity:0.5;
+	}
+	.txt p{
+		color:#fff;
+		float:left;
+		position:relative;
+	}
+	.txt .p1{
+		font-size:12px;
+		width:12px;
+		margin:25px 25px 0 20px;
+	}
+	.txt .p2{
+		font-size:14px;
+		width:14px;
+		margin-top:25px;
+	}
+	</style>
+	<script>
+	$(function(){
+		$(".pic li").mouseover(function(){
+			$(this).stop().animate( { "width" : "789px" }, 500 )
+				.siblings("li").stop().animate( { "width" : "100px" }, 500 );
+		});
+	});
+	</script>
+</head>
+<body>
+	<div class="pic">
+		<ul>
+			<li class="l1">
+				<a href="javascript:;" target="_blank">
+					<div class="txt">
+						<p class="p1">作者 ： 必须写中文样子才好看点</p>
+						<p class="p2">猜猜看,   这是哪里.</p>
+					</div>
+				</a>
+			</li>
+			<li class="l2">
+				<a href="javascript:;" target="_blank">
+					<div class="txt">
+						<p class="p1">作者 ： 必须写中文样子才好看点</p>
+						<p class="p2">猜猜看,   这是哪里.</p>
+					</div>
+				</a>
+			</li>
+			<li class="l3"> 
+				<a href="javascript:;" target="_blank">
+					<div class="txt">
+						<p class="p1">作者 ： 必须写中文样子才好看点</p>
+						<p class="p2">猜猜看,   这是哪里.</p>
+					</div>
+				</a>
+			</li>
+			<li class="l4">          
+				<a href="javascript:;" target="_blank">
+					<div class="txt">
+						<p class="p1">作者 ： 必须写中文样子才好看点</p>
+						<p class="p2">猜猜看,   这是哪里.</p>
+					</div>
+				</a>
+			</li>
+		</ul>
+	</div>
+</body>
+</html>

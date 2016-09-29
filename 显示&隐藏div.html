@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>显示&隐藏div</title>
+	<script src="jquery.min.js"></script>
+	<script>
+	$(function(){
+		var $btn = $("#btn");
+		var $box = $("#box");
+		// $("#btn").click(function(){
+		// 	if ( $box.is( ":visible" ) ) {
+		// 		$box.hide( 3000 );
+		// 	}else {
+		// 		$box.show( 3000 );
+		// 	}
+		// });
+
+		// $("#btn").click(function(){
+		// 	if ( $box.is( ":visible" ) ) {
+		// 		// $box.slideUp();
+		// 		//fast slow normal
+		// 		// $box.slideUp( 2000 );
+		// 		$box.slideUp( "fast" );
+		// }else {
+		// 		// $box.slideDown();
+		// 		$box.slideDown( 2000 );
+		// 	}
+		// });
+
+		// $("#btn").click(function(){
+		// 	if ( $box.is( ":visible" ) ) {
+		// 		$box.fadeOut( 2000 );
+		// 	}else {
+		// 		$box.fadeIn( 2000 );
+		// 	}
+		// });
+
+
+		// $("#btn").click(function(){
+			// $box.toggle();
+			// $box.slideToggle();
+		// });
+
+
+		// $("#btn").click(function(){
+		// 	if ( $box.hasClass("show") ) {
+		// 		$box.removeClass("show");
+		// 	}else {
+		// 		$box.addClass("show");
+		// 	}
+		// });
+
+
+		$("#btn").click(function(){
+			if ( $box.hasClass("show") ) {
+				$box.attr( "class", "" );
+			}else {
+				$box.attr( "class", "show" );
+			}
+		});
+
+
+
+	});
+	</script>
+	<style>
+	div{
+		width: 200px;
+		height: 200px;
+		background: red;
+		display: none;
+	}
+	.show {
+		display: block;
+	}
+	</style>
+</head>
+<body>
+	<input type="button" value="显示&隐藏div" id="btn">	
+	<div id="box"></div>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>列表框的双向选择</title>
+	<script src="../jquery.min.js"></script>
+	<script src="select.js"></script>
+	<style>
+	.left,.center,.right {
+		float: left;
+		margin-left: 20px;
+	}
+	
+	.center span {
+		display: block;
+		margin: 20px;
+		font-size: 20px;
+		cursor:pointer;
+	}	
+
+	select {
+		width: 100px;
+		height: 100px;
+	}
+
+	.btn {
+		padding-left: 50px;
+	}
+
+	.btn:before,
+	.btn:after {
+		clear: both;
+		display:table;
+		content: " ";
+	}
+	</style>
+</head>
+<body>
+	<div class="left">
+		<select name="" id="lSelect" multiple>
+			<option value="20">张三 - 20</option>
+			<option value="22">李四 - 22</option>
+			<option value="24">王五 - 24</option>
+			<option value="26">赵六 - 26</option>
+		</select>
+	</div>	
+	<div class="center">
+		<span class="toRight"> > </span>
+		<span class="toLeft"> < </span>
+	</div>
+	<div class="right">
+		<select name="" id="rSelect" multiple></select>
+	</div>	
+	<div class="btn">
+		<input type="button" value="获取选择的值" id="btn"> 
+	</div>
+</body>
+</html>

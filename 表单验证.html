@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>表单验证</title>
+        <script src="jquery.min.js"></script>
+        <script>
+        $(function(){
+                $("#userForm :input:eq(0), #userForm :input:eq(1)").blur(function(){
+                        var val = $(this).val();
+                        if ( $(this).parent().find( "span" ).length > 0 ) {
+                                $(this).parent().find( "span" ).remove();
+                        }
+                        if ( !/^\w{6,20}$/.test( val ) ) {
+                                $(this).parent().append( "<span class='error'>error</span>" );
+                        }else {
+                                $(this).parent().append( "<span class='ok'>ok</span>" );
+                        }
+                });
+                $("#userForm :submit").click(function(){
+                        $( "#userForm :input:eq(0)" ).triggerHandler( "blur" );
+                        $( "#userForm :input:eq(1)" ).triggerHandler( "blur" );
+                        // $( "#userForm :password" ).triggerHandler( "blur" );
+                        if ( $( "#userForm" ).find( ".error" ).length > 0 ) {
+                                return false;
+                        }
+                });
+        });
+        </script>
+        <style>
+        .error {
+                color:red;
+        }
+        .ok {
+                color:green;
+        }
+        </style>
+</head>
+<body>
+        <form action="http://www.baidu.com" id="userForm">
+                <p>
+                        用户名:
+                        <input type="text" name="user" id="user">
+                </p>
+                <p>
+                        密码:
+                        <input type="password" name="pwd" id="pwd">
+                </p>
+                <p>
+                        <input type="submit" value="提交">
+                </p>
+        </form>
+</body>
+</html>

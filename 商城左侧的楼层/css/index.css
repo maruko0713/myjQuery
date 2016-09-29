@@ -1,0 +1,80 @@
+* {
+        margin: 0px;
+        padding: 0px;
+        list-style-type: none;
+}
+
+body {
+        font-family: "微软雅黑";
+        font-size: 40px;
+        color:#ff8800;
+}
+
+a {
+        text-decoration: none;
+        color:#ff8800;
+}
+
+
+.header {
+        background: #ccc;
+        padding: 100px;
+}
+
+.banner {
+        background: #666;
+        width: 1200px;
+        margin:0px auto;
+        height: 400px;
+}
+
+.guess {
+        background: #999;
+        width: 1200px;
+        margin:0px auto;
+        height: 400px;
+}
+
+.floor:nth-child(odd) {
+        background: #333;
+        width: 1200px;
+        margin:0px auto;
+        height: 400px;
+        text-align: center;
+}
+
+.floor:nth-child(even) {
+        background: #666;
+        width: 1200px;
+        margin:0px auto;
+        height: 400px;
+        text-align: center;
+}
+
+.sidebar {
+        width: 28px;
+        padding: 5px;
+        position: fixed;
+        top:100px;
+        left: 300px;
+        display: none;
+}
+
+.sidebar li {
+        height: 26px;
+        border-bottom: 1px dashed #ccc;
+}
+
+.sidebar a {
+        font-size: 12px;
+        display: block;
+        float: left;
+        height: 26px;
+        width: 26px;
+        line-height: 24px;
+        text-align: center;
+}
+.sidebar a:hover {
+        background: red;
+        color:#fff !important;
+}

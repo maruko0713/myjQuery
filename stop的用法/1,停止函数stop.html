@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>stop 1</title>
+	<script src="../jquery.min.js"></script>	
+	<script>
+	$(function(){
+		$("div").hover(function(){
+			$(this).stop();
+			$(this).animate( { "width" : "300px" }, 1000 );
+		}, function(){
+			$(this).stop();
+			$(this).animate( { "width" : "100px" }, 1000 );
+		});
+	});
+	</script>
+	<style>
+	div {
+		width: 200px;
+		height: 200px;
+		background: red;
+	}
+	</style>
+</head>
+<body>
+	<div></div>	
+</body>
+</html>

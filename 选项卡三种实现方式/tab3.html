@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>选项卡</title>
+	<script src="../js/jquery.min.js"></script>
+	<script>
+	$(function(){
+		$("input").click(function(){
+			var index = $(this).index();
+			// alert(index);	
+			$(this).addClass( "active" ).siblings( "input" ).removeClass( "active" );
+			$( "div" ).eq(index).show().siblings( "div" ).hide();
+		});
+	});	
+	</script>
+	<style>
+	div {
+		width: 200px;
+		height: 200px;
+		border: 1px solid #000;
+		display: none;
+	}
+	.active {
+		background: yellow;
+	}
+	</style>
+</head>
+<body>
+	<input type="button" value="按钮1" class="active">	
+	<input type="button" value="按钮2">	
+	<input type="button" value="按钮3">	
+	<input type="button" value="按钮4">	
+	<div style="display:block;">1</div>
+	<div>2</div>
+	<div>3</div>
+	<div>4</div>
+</body>
+</html>

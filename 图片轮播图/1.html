@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>图片切换(slide)特效</title>
+	<script src="../jquery.min.js"></script>
+	<style>
+	* {
+		margin: 0px;
+		padding: 0px;
+	}
+	ul,li {
+		list-style-type: none;
+	}
+	a {
+		text-decoration: none;
+		color:#000;
+	}
+	img {
+		border: none;
+		display: none;
+	}
+	.container {
+		width: 980px;
+		margin: 20px auto;
+		position: relative;
+	}
+	.slide {
+		width: 960px;
+		height: 500px;
+	}
+	.icon {
+		position: absolute;
+		right: 50px;
+		bottom: 10px;
+	}
+	.icon li {
+		float: left;
+		margin-left: 20px;
+		background: green;
+		padding: 5px 10px;
+		cursor:pointer;
+	}
+	.icon li.active {
+		background: yellow;
+	}
+	</style>
+	<script>
+	$(function() {
+		var iIndex = 0,timer=null,
+		    icons=$(".icon li"),
+		    imgs = $(".slide img"),
+		    container = $(".container");
+
+		autoPlay();
+		function makeChange() {
+			imgs.eq(iIndex).show().siblings().hide();
+			icons.eq(iIndex).addClass("active").siblings().removeClass("active");
+		}
+		function autoPlay() {
+			timer = setInterval(addChange,1000);
+		}
+		function addChange() {
+			iIndex++;
+			if(iIndex==imgs.length){
+				iIndex = 0;
+			}
+			makeChange();
+		}
+		icons.each(function(){
+			$(this).click(function(){
+				iIndex = $(this).index();
+				makeChange();
+			});
+		});
+		container.mouseover(function(){
+			clearInterval(timer);
+		}).mouseout(function(){
+			autoPlay();
+		});
+
+	});
+	</script>
+</head>
+<body>
+	<div class="container">
+		<div class="slide">
+			<img src="./img/1.jpg" alt="" width="960" height="500" style="display:block;">	
+			<img src="./img/2.jpg" alt="" width="960" height="500">		
+			<img src="./img/3.jpg" alt="" width="960" height="500">		
+			<img src="./img/4.jpg" alt="" width="960" height="500">		
+		</div>
+		<div class="icon">
+			<ul>
+				<li class="active"><a href="javascript:;">1</a></li>
+				<li><a href="javascript:;">2</a></li>
+				<li><a href="javascript:;">3</a></li>
+				<li><a href="javascript:;">4</a></li>
+			</ul>	
+		</div>
+	</div>	
+</body>
+</html>

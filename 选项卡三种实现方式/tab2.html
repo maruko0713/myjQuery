@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>选项卡</title>
+	<script>
+	window.onload = function () {
+		var aBtn = document.getElementsByTagName( "input" );
+		var aDiv = document.getElementsByTagName( "div" );
+		for ( var i = 0; i < aBtn.length; i++ ) {
+			aBtn[i].onclick = (function ( j ) {
+				return function () {
+					for ( var k = 0; k < aBtn.length; k++ ) {
+						if ( k == j ) {
+							aBtn[j].className = "active";
+							aDiv[j].style.display = "block";
+						}else {
+							aBtn[k].className = "";
+							aDiv[k].style.display = "none";
+						}
+					}
+				}
+			})(i);
+		}
+
+	}
+	</script>
+	<style>
+	div {
+		width: 200px;
+		height: 200px;
+		border: 1px solid #000;
+		display: none;
+	}
+	.active {
+		background: yellow;
+	}
+	</style>
+</head>
+<body>
+	<input type="button" value="按钮1" class="active">	
+	<input type="button" value="按钮2">	
+	<input type="button" value="按钮3">	
+	<input type="button" value="按钮4">	
+	<div style="display:block;">1</div>
+	<div>2</div>
+	<div>3</div>
+	<div>4</div>
+</body>
+</html>

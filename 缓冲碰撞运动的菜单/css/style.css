@@ -1,0 +1,62 @@
+* {
+	margin: 0px;
+	padding: 0px;
+	font-family: "微软雅黑";
+}
+ul,li {
+	list-style-type: none;
+}
+a {
+	color:#fff;
+	text-decoration: none;
+}
+
+.nav {
+	height: 40px;
+	width: 100%;
+	margin-top: 100px;
+	background-color: #01204f;
+}
+
+.nav ul {
+	height: 40px;
+	width: 984px;
+	margin: 0px auto;
+	position: relative;
+}
+
+.nav ul li {
+	float: left;
+	z-index: 5;
+	position: relative;
+}
+
+.nav ul li a {
+	padding:0px 10px;	
+	display: block;
+	height: 100%;
+	line-height: 40px;
+	font-size: 14px;
+	font-weight: 700;
+	margin-right: 2px;
+}
+
+.nav ul li a.active {
+	background: #c00;
+}
+
+.nav .slide {
+	width: 50px;
+	height: 40px;
+	background: #c00;
+	position: absolute;
+	z-index:1;
+}
+
+
+
+
+
+
+
+

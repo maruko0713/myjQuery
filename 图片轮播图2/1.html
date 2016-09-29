@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>图片切换(slide)特效</title>
+	<script src="../jquery.min.js"></script>
+	<style>
+	* {
+		margin: 0px;
+		padding: 0px;
+	}
+	ul,li {
+		list-style-type: none;
+	}
+	a {
+		text-decoration: none;
+		color:#000;
+	}
+	img {
+		border: none;
+		display: none;
+	}
+	.container {
+		width: 980px;
+		margin: 20px auto;
+		position: relative;
+	}
+	.slide {
+		width: 960px;
+		height: 500px;
+	}
+	.icon {
+		position: absolute;
+		right: 50px;
+		bottom: 10px;
+	}
+	.icon li {
+		float: left;
+		margin-left: 20px;
+		background: green;
+		padding: 5px 10px;
+		cursor:pointer;
+	}
+	.icon li.active {
+		background: yellow;
+	}
+	</style>
+	<script>
+	$(function(){
+		var timer = null;
+		var iIndex = 0;	
+		var arrImg = [ "./img/1.jpg", "./img/2.jpg", "./img/3.jpg", "./img/4.jpg" ];
+		timer = setInterval( function(){
+			autoLoop();			
+		}, 1000 );
+
+		$(".container").mouseover(function(){
+			clearInterval( timer );
+		}).mouseout(function(){
+			timer = setInterval( function(){
+				autoLoop();			
+			}, 1000 );
+		});
+
+		slide();
+		function slide () {
+			$(".icon li").click(function(){
+				var index = $(this).index();
+				$(".slide img").attr( "src", arrImg[index] );
+				$(".icon li").eq(index).addClass("active").siblings("li").removeClass("active");
+				iIndex = index;
+			});
+		}
+
+		function toggleSlide () {
+			$(".slide img").attr( "src", arrImg[iIndex] );
+			$(".icon li").eq(iIndex).addClass("active").siblings("li").removeClass("active");
+		}
+
+		function autoLoop () {
+			iIndex++;
+			if ( iIndex == arrImg.length ) {
+				iIndex = 0;
+			}
+			toggleSlide();
+		}
+
+
+	});
+	</script>
+</head>
+<body>
+	<div class="container">
+		<div class="slide">
+			<img src="./img/1.jpg" alt="" width="960" height="500" style="display:block;">	
+		</div>
+		<div class="icon">
+			<ul>
+				<li class="active"><a href="javascript:;">1</a></li>
+				<li><a href="javascript:;">2</a></li>
+				<li><a href="javascript:;">3</a></li>
+				<li><a href="javascript:;">4</a></li>
+			</ul>	
+		</div>
+	</div>	
+</body>
+</html>

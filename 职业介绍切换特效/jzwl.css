@@ -1,0 +1,163 @@
+* {
+	margin: 0px;
+	padding: 0px;
+}
+
+body {
+	font: 14px/1.5 "Microsoft Yahei",SimSun;
+    color: #525252;
+}
+
+em,i {
+	font-style: normal;
+}
+
+ul,li {
+	list-style-type: none;
+}
+
+a {
+	color: #525252;
+    text-decoration: none;
+}
+
+.role {
+    height: 403px;
+    width: 912px;
+    margin:100px auto;
+    overflow: hidden;
+}
+
+.role h3 {
+    height: 85px;
+    color: #37332d;
+    font-size: 12px;
+    line-height: 114px;
+    position: relative;
+    font-weight: 400;
+}
+
+.role h3 em {
+    font-size: 24px;
+    margin-right: 6px;
+    color: #000;
+    font-style: normal;
+    font-weight: 400;
+}
+
+.role-con {
+    background: #F3F3F3 url(./img/role_bg.jpg) no-repeat right 0;
+    height: 318px;
+    position: relative;
+}
+
+.role-nav {
+	position: absolute;
+    left: 23px;
+    top: 24px;
+    z-index: 2;
+}
+
+.role-nav li {
+    font-size: 18px;
+    display: inline;
+    float: left;
+    text-align: center;
+    position: relative;
+    margin-right: 26px;
+}
+
+.f-cf:after {
+    clear: both;
+    display: block;
+    content: "";
+    height: 0;
+    line-height: 0;
+    font-size: 0;
+}
+
+.role-nav li a:hover, .role-nav li.cur a {
+	color: #fff;
+    background: #192134;
+}
+
+.role-nav li a {
+    line-height: 26px;
+    width: 73px;
+    height: 26px;
+    display: block;
+    transition: .4s;
+}
+
+.role-detail {
+    position: relative;
+    display: none;
+}
+
+.curElem {
+	display: block;
+}
+
+.r-desc {
+	position: absolute;
+    z-index: 2;
+    top: 86px;
+    left: 29px;
+    width: 400px;
+    line-height: 24px;
+}
+
+.difficulty {
+    line-height: 34px;
+}
+
+.difficulty strong {
+    font-size: 20px;
+    color: #9F0000;
+}
+
+.r-desc em {
+    font-weight: 700;
+}
+
+.star {
+    width: 16px;
+    height: 18px;
+    background: url(./img/star.png) no-repeat;
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 6px 0 0;
+}
+
+.star2 {
+    background-image: url(./img/star2.png);
+}
+
+.readmore {
+    width: 113px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    background: #F0F0F0;
+    display: block;
+    border: 1px solid #192134;
+    color: #192134;
+    font-size: 18px;
+    margin-top: 10px;
+    transition: .5s;
+}
+
+.curElem .r-per {
+    position: absolute;
+    right: 0px;
+    width: 544px;
+    height: 403px;
+}
+
+
+
+
+
+
+
+
