@@ -49,7 +49,7 @@ $(function(){
 	// 	$(this).remove();
 	// 	$("#select1 .select-all").addClass("selected").siblings("dd").removeClass( "selected" );
 	// }
-	$("#selectA").on("click",function(event){
+	$(".select-result").on("click","#selectA",function(event){
 		event.preventDefault();
 		$(this).remove();
 		$("#select1 .select-all").addClass("selected").siblings("dd").removeClass( "selected" );
